@@ -13,7 +13,7 @@
   "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_AGATHA",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "type": "object",
@@ -46,6 +46,17 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 6,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "PokemonLeague_AgathasRoom_EventScript_Agatha"
+    }
+  ]
 }

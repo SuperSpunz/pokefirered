@@ -47,6 +47,7 @@ PokemonLeague_BrunosRoom_EventScript_EnterRoom::
 PokemonLeague_BrunosRoom_EventScript_Bruno::
 	lock
 	faceplayer
+	setvar VAR_TEXT_COLOR, 0
 	famechecker FAMECHECKER_BRUNO, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_BRUNO, PokemonLeague_BrunosRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_BRUNO, 0
@@ -92,6 +93,7 @@ PokemonLeague_BrunosRoom_EventScript_DefeatedBruno::
 	call PokemonLeague_EventScript_OpenDoor
 	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
 	closemessage
+	call PokemonLeague_BrunosRoom_EventScript_BrunoMoveOutOfWayRight
 	call_if_eq VAR_FACING, DIR_NORTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayRight
 	call_if_eq VAR_FACING, DIR_SOUTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayLeft
 	call_if_eq VAR_FACING, DIR_WEST, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown
@@ -113,3 +115,12 @@ PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown::
 	applymovement LOCALID_BRUNO, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	return
+
+PokemonLeague_BrunosRoom_EventScript_BrunoMoveOutOfWayRight::
+	applymovement LOCALID_BRUNO, PokemonLeague_BrunosRoom_Movement_BrunoMoveOutOfWayRight
+	waitmovement 0
+	return
+
+PokemonLeague_BrunosRoom_Movement_BrunoMoveOutOfWayRight::
+	walk_right
+	step_end

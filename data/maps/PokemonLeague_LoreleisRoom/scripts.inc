@@ -1,3 +1,5 @@
+.set LOCALID_LORELEI, 1
+
 PokemonLeague_LoreleisRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, PokemonLeague_LoreleisRoom_OnResume
 	map_script MAP_SCRIPT_ON_LOAD, PokemonLeague_LoreleisRoom_OnLoad
@@ -50,6 +52,7 @@ PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	lock
 	faceplayer
+	setvar VAR_TEXT_COLOR, 1
 	famechecker FAMECHECKER_LORELEI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_LORELEI, 0
@@ -89,5 +92,17 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	setflag FLAG_DEFEATED_LORELEI
 	call PokemonLeague_EventScript_OpenDoor
 	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle
+	closemessage
+	call PokemonLeague_LoreleisRoom_EventScript_LoreleiMoveOutOfWayLeft
 	release
 	end
+
+PokemonLeague_LoreleisRoom_EventScript_LoreleiMoveOutOfWayLeft::
+	applymovement LOCALID_LORELEI, PokemonLeague_LoreleisRoom_Movement_LoreleiMoveOutOfWayLeft
+	waitmovement 0
+	return
+
+PokemonLeague_LoreleisRoom_Movement_LoreleiMoveOutOfWayLeft::
+	walk_left
+	walk_in_place_faster_right
+	step_end

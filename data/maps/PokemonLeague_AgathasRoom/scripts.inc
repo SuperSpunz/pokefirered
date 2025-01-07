@@ -1,3 +1,5 @@
+.set LOCALID_AGATHA, 1
+
 PokemonLeague_AgathasRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, PokemonLeague_AgathasRoom_OnResume
 	map_script MAP_SCRIPT_ON_LOAD, PokemonLeague_AgathasRoom_OnLoad
@@ -45,6 +47,7 @@ PokemonLeague_AgathasRoom_EventScript_EnterRoom::
 PokemonLeague_AgathasRoom_EventScript_Agatha::
 	lock
 	faceplayer
+	setvar VAR_TEXT_COLOR, 1
 	famechecker FAMECHECKER_AGATHA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_AGATHA, PokemonLeague_AgathasRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_AGATHA, 0
@@ -85,5 +88,17 @@ PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha::
 	setflag FLAG_DEFEATED_AGATHA
 	call PokemonLeague_EventScript_OpenDoor
 	msgbox PokemonLeague_AgathasRoom_Text_PostBattle
+	closemessage
+	call PokemonLeague_AgathasRoom_EventScript_AgathaMoveOutOfWayLeft
 	release
 	end
+
+PokemonLeague_AgathasRoom_EventScript_AgathaMoveOutOfWayLeft::
+	applymovement LOCALID_AGATHA, PokemonLeague_AgathasRoom_Movement_AgathaMoveOutOfWayLeft
+	waitmovement 0
+	return
+
+PokemonLeague_AgathasRoom_Movement_AgathaMoveOutOfWayLeft::
+	walk_left
+	walk_in_place_faster_right
+	step_end

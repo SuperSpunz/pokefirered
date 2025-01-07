@@ -101,6 +101,7 @@ PokemonLeague_LancesRoom_Movement_WalkThroughCorridor::
 PokemonLeague_LancesRoom_EventScript_Lance::
 	lock
 	faceplayer
+	setvar VAR_TEXT_COLOR, 0
 	famechecker FAMECHECKER_LANCE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LANCE, PokemonLeague_LancesRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_LANCE, 0
@@ -143,6 +144,7 @@ PokemonLeague_LancesRoom_EventScript_DefeatedLance::
 	call PokemonLeague_EventScript_OpenDoorLance
 	msgbox PokemonLeague_LancesRoom_Text_PostBattle
 	closemessage
+	call PokemonLeague_LancesRoom_EventScript_LanceMoveOutOfWayRight
 	release
 	end
 
