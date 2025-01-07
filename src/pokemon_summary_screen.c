@@ -2515,25 +2515,6 @@ u8 GetNatureTextColor(s8 natureMod)
         return 2;
 }
 
-static const u8 sNatureTextColors[][3] =
-{
-    {0, 14, 10},
-    {0, 1, 10}, //Change to 0, 2, 1 for an alternative
-    {0, 7, 10}, //Change to 0, 6, 7 for an alternative 
-};
-
-extern const s8 sNatureStatTable[][5];
-
-u8 GetNatureTextColor(s8 natureMod)
-{
-    if (natureMod == 0)
-        return 0;
-    else if (natureMod > 0)
-        return 1;
-    else
-        return 2;
-}
-
 static void PrintSkillsPage(void)
 {
     const s8 *natureMod = sNatureStatTable[GetNature(&sMonSummaryScreen->currentMon)];
