@@ -1,3 +1,8 @@
+## Auto-Run
+Credit to [**ghoulslash**](https://github.com/ghoulslash)'s [**auto-run**](https://github.com/ghoulslash/pokeemerald/tree/auto-run) branch for pokeemerald and to [**lioniac**](https://github.com/lioniac) for [**porting**](https://github.com/lioniac/pokefirered/commit/ff3fcd4a500bb5b975623eab943cc75c675f9f49) it to pokefirered.
+
+This is mostly their code, with some minor tweaks to get it working as I expected.
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
