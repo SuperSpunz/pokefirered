@@ -3,7 +3,7 @@ Credit to [**ghoulslash**](https://github.com/ghoulslash)'s [**auto-run**](https
 
 This is mostly their code, with some minor tweaks to get it working the way I wanted.
 
-Once you get the running shoes from Oak's Aide at Route 3, set BUTTON MODE to LR, then press R to enable/disable Auto-Run. Holding B while Auto-Run is enabled will set the player back to walking speed.
+Once you get the running shoes from Oak's Aide at Route 3, set BUTTON MODE to LR or L=A, then press R to enable/disable Auto-Run. Holding B while Auto-Run is enabled will set the player back to walking speed.
 
 # Pokémon FireRed and LeafGreen
 
