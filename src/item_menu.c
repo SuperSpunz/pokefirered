@@ -1863,12 +1863,12 @@ static void ReturnToBagMenuFromSubmenu_PCBox(void)
 static void Task_ItemContext_Sell(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (gSpecialVar_ItemId == ITEM_TM_CASE)
+/*    if (gSpecialVar_ItemId == ITEM_TM_CASE)
     {
         ItemMenu_SetExitCallback(GoToTMCase_Sell);
         ItemMenu_StartFadeToExitCallback(taskId);
     }
-    else if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
+    else */ if (gSpecialVar_ItemId == ITEM_BERRY_POUCH)
     {
         ItemMenu_SetExitCallback(GoToBerryPouch_Sell);
         ItemMenu_StartFadeToExitCallback(taskId);
@@ -1898,10 +1898,10 @@ static void Task_ItemContext_Sell(u8 taskId)
     }
 }
 
-static void GoToTMCase_Sell(void)
+/* static void GoToTMCase_Sell(void)
 {
     InitTMCase(TMCASE_SELL, ReturnToBagMenuFromSubmenu_Sell, FALSE);
-}
+} */
 
 static void GoToBerryPouch_Sell(void)
 {
