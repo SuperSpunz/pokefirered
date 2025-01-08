@@ -2555,6 +2555,8 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_SUPER_REPEL]      = ITEM_TYPE_FIELD_USE,    //Added in Gen I
     [ITEM_MAX_REPEL]        = ITEM_TYPE_FIELD_USE,    //Added in Gen I
     [ITEM_ESCAPE_ROPE]      = ITEM_TYPE_FIELD_USE,    //Added in Gen I
+//    [ITEM_ODD_KEYSTONE]     = ITEM_TYPE_FIELD_USE,    //Added in Gen IV
+//    [ITEM_WISHING_PIECE]    = ITEM_TYPE_FIELD_USE,    //Added in Gen VIII
 
     //HEALTH RECOVERY
     [ITEM_POTION]           = ITEM_TYPE_HEALTH_RECOVERY,    //Added in Gen I
@@ -3010,9 +3012,6 @@ static const u16 sItemsByType[ITEMS_COUNT] =
 //    [ITEM_YELLOW_APRICORN]  = ITEM_TYPE_VALUABLE,    //Added in Gen II, Unavailable in Gen III, re-added in Gen IV
 //    [ITEM_WHITE_APRICORN]   = ITEM_TYPE_VALUABLE,    //Added in Gen II, Unavailable in Gen III, re-added in Gen IV
 
-//    [ITEM_ODD_KEYSTONE]     = ITEM_TYPE_VALUABLE,    //Added in Gen IV
-//    [ITEM_WISHING_PIECE]    = ITEM_TYPE_VALUABLE,    //Added in Gen VIII
-
     //RELIC
 //    [ITEM_RELIC_COPPER]     = ITEM_TYPE_RELIC,    //Added in Gen V
 //    [ITEM_RELIC_SILVER]     = ITEM_TYPE_RELIC,    //Added in Gen V
@@ -3062,6 +3061,30 @@ static const u16 sItemsByType[ITEMS_COUNT] =
     [ITEM_TROPIC_MAIL]      = ITEM_TYPE_MAIL_SORT,    //Only available in Gen III
     [ITEM_WAVE_MAIL]        = ITEM_TYPE_MAIL_SORT,    //Only available in Gen III
     [ITEM_WOOD_MAIL]        = ITEM_TYPE_MAIL_SORT,    //Only available in Gen III
+//    [ITEM_AIR_MAIL]         = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_BLOOM_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_BRICK_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_BUBBLE_MAIL]      = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_FLAME_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_GRASS_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_HEART_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_MOSAIC_MAIL]      = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_SNOW_MAIL]        = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_SPACE_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_STEEL_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_TENNEL_MAIL]      = ITEM_TYPE_MAIL_SORT,    //Only available in Gen IV
+//    [ITEM_BRIDGEMAIL_D]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_BRIDGEMAIL_M]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_BRIDGEMAIL_S]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_BRIDGEMAIL_T]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_BRIDGEMAIL_V]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_FAVORED_MAIL]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_GREET_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_INQUIRY_MAIL]     = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_LIKE_MAIL]        = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_REPLY_MAIL]       = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_RSVP_MAIL]        = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
+//    [ITEM_THANKS_MAIL]      = ITEM_TYPE_MAIL_SORT,    //Only available in Gen V
 };
 static const u8 sFontColorTable[][3] =
 {
