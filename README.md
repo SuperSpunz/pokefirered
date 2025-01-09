@@ -1,12 +1,11 @@
 ## Bag-Sort
 
 Credits:
-[**ghoulslash**](https://github.com/ghoulslash) for making [**Bag-Sort**](https://github.com/ghoulslash/pokeemerald/tree/bag_sort) for pokeemerald
-[**lioniac**](https://github.com/lioniac) for [**porting ghoulslash's Bag-Sort**](https://github.com/lioniac/pokefirered/commit/a46c37af34d913019589abe14b5ecb49c22f5484) to pokefirered
+* [**ghoulslash**](https://github.com/ghoulslash) for making [**Bag-Sort**](https://github.com/ghoulslash/pokeemerald/tree/bag_sort) for pokeemerald
+* [**lioniac**](https://github.com/lioniac) for [**porting ghoulslash's Bag-Sort**](https://github.com/lioniac/pokefirered/commit/a46c37af34d913019589abe14b5ecb49c22f5484) to pokefirered
 
 ### Description
-Sorts items in the bag by Name, Type, or Amount. Open the Sort Menu by pressing Start in the bag. Items pocket can sort by Name, Type, or Amount; Key Items pocket can be sorted by Name. PokéBalls pocket can be sorted by Name or Amount.
-Only changes I made was putting a window around the "Sort Items How?" prompt, and some changes to the item Type categories to fit my preferences a bit more.
+Sorts items in the bag by Name, Type, or Amount. Open the Sort Menu by pressing Start in the bag. Items pocket can sort by Name, Type, or Amount; Key Items pocket can be sorted by Name. PokéBalls pocket can be sorted by Name or Amount. Only changes I made was putting a window around the "Sort Items How?" prompt, and some changes to the item Type categories to fit my preferences a bit more.
 
 # Pokémon FireRed and LeafGreen
 
