@@ -1,3 +1,9 @@
+## Access "Bill's PC" from the PC in the Player's bedroom in Pallet Town
+
+### Description
+* Once you meet Bill at the Sea Cottage on Route 25, the PC in the Player's bedroom in Pallet Town will be upgraded to a Full PC, like the ones at Pokémon Centers. (used the flag that changes "Someone's PC" to "Bill's PC")
+* To-Do: Have Bill give the player an item (like "Network Card") that can be used to upgrade the Pallet Town PC. (Might work on this one day, but probably not soon)
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
