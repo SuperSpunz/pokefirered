@@ -2911,6 +2911,7 @@ static void PokeSum_PrintAbilityNameAndDesc(void)
 static void PokeSum_DrawMoveTypeIcons(void)
 {
     u8 i;
+    struct Pokemon *mon = &sMonSummaryScreen->currentMon;
 
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
 
@@ -2919,10 +2920,38 @@ static void PokeSum_DrawMoveTypeIcons(void)
         if (sMonSummaryScreen->moveIds[i] == MOVE_NONE)
             continue;
 
+        else if (sMonSummaryScreen->moveIds[i] == MOVE_HIDDEN_POWER)
+        {
+            u8 typeBits = ((GetMonData(mon, MON_DATA_HP_IV)    & 1) << 0)
+                        | ((GetMonData(mon, MON_DATA_ATK_IV)   & 1) << 1)
+                        | ((GetMonData(mon, MON_DATA_DEF_IV)   & 1) << 2)
+                        | ((GetMonData(mon, MON_DATA_SPEED_IV) & 1) << 3)
+                        | ((GetMonData(mon, MON_DATA_SPATK_IV) & 1) << 4)
+                        | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 1) << 5);
+            u8 type = (15 * typeBits) / 63 + 1;
+            if (type >= TYPE_MYSTERY)
+                type++;
+            type |= 0xC0;
+            sMonSummaryScreen->moveTypes[i] = type & 0x3F;
+        }
         BlitMenuInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[i] + 1, 3, GetMoveNamePrinterYpos(i));
     }
 
     if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
+        if (sMonSummaryScreen->moveIds[4] == MOVE_HIDDEN_POWER)
+        {
+            u8 typeBits = ((GetMonData(mon, MON_DATA_HP_IV)    & 1) << 0)
+                        | ((GetMonData(mon, MON_DATA_ATK_IV)   & 1) << 1)
+                        | ((GetMonData(mon, MON_DATA_DEF_IV)   & 1) << 2)
+                        | ((GetMonData(mon, MON_DATA_SPEED_IV) & 1) << 3)
+                        | ((GetMonData(mon, MON_DATA_SPATK_IV) & 1) << 4)
+                        | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 1) << 5);
+            u8 type = (15 * typeBits) / 63 + 1;
+            if (type >= TYPE_MYSTERY)
+                type++;
+            type |= 0xC0;
+            sMonSummaryScreen->moveTypes[4] = type & 0x3F;
+        }
         BlitMenuInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[4] + 1, 3, GetMoveNamePrinterYpos(4));
 }
 
