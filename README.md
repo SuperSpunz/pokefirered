@@ -1,6 +1,9 @@
 ## Register-L
-credit to [**ghoulslash**](https://github.com/ghoulslash) for making [**Register-LR for pokeemerald**](https://github.com/ghoulslash/pokeemerald/tree/register-LR).
+Credits:
+* [**ghoulslash**](https://github.com/ghoulslash) for making [**Register-LR**](https://github.com/ghoulslash/pokeemerald/tree/register-LR) for pokeemerald.
 
+### Description
+* You can now register items to L as well as Select.
 Mostly used ghoulslash's code to make this branch. I chose to only register to L to keep this mod compatible with the Auto-Run branch, which uses R for the Auto-Run toggle.
 
 # Pokémon FireRed and LeafGreen
