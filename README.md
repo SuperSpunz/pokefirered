@@ -1,3 +1,9 @@
+## Level 100 Evolve with Rare Candy
+
+Copy/Paste from [**Bulbapedia**](https://bulbapedia.bulbagarden.net/wiki/Methods_of_Evolution#Leveling_up): "Starting in Generation VIII, if a Rare Candy is used on a level 100 Pokémon that evolves by leveling up and currently meets its Evolution requirements, it will evolve (without gaining a level)."
+
+This branch changes the Rare Candy code to look for an available evolution (Level up or Friendship, not Item or Trade) if the Pokémon receiving the Rare Candy is Level 100. Currently, this pops up the "<Pokémon> was elevated to Level 100." messagebox and the stat increase messagebox (all stats get +0, so they stay the same), but it doesn't level up beyond 100. After the messageboxes, it will trigger the evolution cutscene.
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
