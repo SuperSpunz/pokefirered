@@ -1,8 +1,8 @@
 ## Nature Colored Stats in Summary Screen
 Credits:
-[**DizzyEgg**](https://www.pokecommunity.com/members/dizzyegg.454295/) for making [**Nature Colored Stats**](https://www.pokecommunity.com/posts/9165010/) for pokeemerald
-[**Spherical Ice**](https://www.pokecommunity.com/members/spherical-ice.67281/) for [**porting**](https://www.pokecommunity.com/showpost.php?p=9043890&postcount=816) Nature Colored Stats to pokefirered.
-[**Greenphx9**](https://github.com/Greenphx9) for [**remaking**](https://github.com/Greenphx9/pokefirered/tree/nature-colored-stats) Sherical Ice's version of Nature Colored Stats.
+* [**DizzyEgg**](https://www.pokecommunity.com/members/dizzyegg.454295/) for making [**Nature Colored Stats**](https://www.pokecommunity.com/posts/9165010/) for pokeemerald
+* [**Spherical Ice**](https://www.pokecommunity.com/members/spherical-ice.67281/) for [**porting**](https://www.pokecommunity.com/showpost.php?p=9043890&postcount=816) Nature Colored Stats to pokefirered.
+* [**Greenphx9**](https://github.com/Greenphx9) for [**remaking**](https://github.com/Greenphx9/pokefirered/tree/nature-colored-stats) Sherical Ice's version of Nature Colored Stats.
 
 ### Description
 * Stats in the Summary Screen change color to match the Pokémon's nature. Red is increased, Blue is decreased.
