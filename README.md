@@ -1,3 +1,15 @@
+## Infinite & Unsellable TMs
+
+Credits:
+* [**Hiroshi Sotomura**](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [**their post**](https://www.pokecommunity.com/showpost.php?p=10209376) on the PokéCommunity thread.
+
+### Description
+* Makes TMs Infinite by not removing one from the bag when used
+* Makes TMs Unsellable
+* To-Do: Remove quantity text without making TMs register as HMs
+* To-Do: Remove TM10 Hidden Power from the Pickup Table, Make it available somewhere else, and add another item to the pickup table in its place
+* To-Do: [**Make TMs Sell Out at Shops**](https://www.pokecommunity.com/showpost.php?p=10182590&postcount=117)
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
