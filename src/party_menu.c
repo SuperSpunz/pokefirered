@@ -5024,7 +5024,12 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
     if (GetMonData(mon, MON_DATA_LEVEL) != MAX_LEVEL)
         noEffect = PokemonItemUseNoEffect(mon, item, gPartyMenu.slotId, 0);
     else
-        noEffect = TRUE;
+    {
+        if (GetMonData(mon, MON_DATA_LEVEL) == MAX_LEVEL && (GetEvolutionTargetSpecies(mon, EVO_MODE_ITEM_CHECK, 0) != SPECIES_NONE || GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0) != SPECIES_NONE))
+            noEffect = FALSE;
+        else
+            noEffect = TRUE;
+    }
     PlaySE(SE_SELECT);
     if (noEffect)
     {
