@@ -1,9 +1,11 @@
 ## Auto-Run
-Credit to [**ghoulslash**](https://github.com/ghoulslash)'s [**auto-run**](https://github.com/ghoulslash/pokeemerald/tree/auto-run) branch for pokeemerald and to [**lioniac**](https://github.com/lioniac) for [**porting**](https://github.com/lioniac/pokefirered/commit/ff3fcd4a500bb5b975623eab943cc75c675f9f49) it to pokefirered.
 
-This is mostly their code, with some minor tweaks to get it working the way I wanted.
+Credits:
+* [**ghoulslash**](https://github.com/ghoulslash) for making [**auto-run**](https://github.com/ghoulslash/pokeemerald/tree/auto-run) for pokeemerald
+* [**lioniac**](https://github.com/lioniac) for [**porting ghoulslash's auto-run**](https://github.com/lioniac/pokefirered/commit/ff3fcd4a500bb5b975623eab943cc75c675f9f49) to pokefirered
 
-Once you get the running shoes from Oak's Aide at Route 3, set BUTTON MODE to LR or L=A, then press R to enable/disable Auto-Run. Holding B while Auto-Run is enabled will set the player back to walking speed.
+### Description
+Once you get the running shoes from Oak's Aide at Route 3, set BUTTON MODE to LR or L=A, then press R to enable/disable Auto-Run. Holding B while Auto-Run is enabled will make the player walk until B is released.
 
 # Pokémon FireRed and LeafGreen
 
