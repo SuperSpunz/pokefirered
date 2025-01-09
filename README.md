@@ -1,3 +1,11 @@
+## Physical Special Split
+
+Credits:
+* [**Tutorial**](https://github.com/pret/pokeemerald/wiki/add-physical-special-split)
+
+### Description
+Adds the Physical Special Split from Gen IV
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
