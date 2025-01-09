@@ -2498,10 +2498,24 @@ void DisplayPartyMenuStdMessage(u32 stringId)
 
         if (stringId == PARTY_MSG_CHOOSE_MON)
         {
+            u8 enemyNextMonID = *(gBattleStruct->monToSwitchIntoId + B_SIDE_OPPONENT);
+            u16 species = GetMonData(&gEnemyParty[enemyNextMonID], MON_DATA_SPECIES);
             if (sPartyMenuInternal->chooseMultiple)
                 stringId = PARTY_MSG_CHOOSE_MON_AND_CONFIRM;
             else if (!ShouldUseChooseMonText())
                 stringId = PARTY_MSG_CHOOSE_MON_OR_CANCEL;
+            else if (gMain.inBattle){
+                // Checks if the opponent is sending out a new pokemon.
+                if (species >= NUM_SPECIES || species == SPECIES_NONE){
+                    // Now tries to check if there's any opposing pokemon on the field.
+                    if (species >= NUM_SPECIES || species == SPECIES_NONE || gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+                        stringId = PARTY_MSG_CHOOSE_MON_2; // No species on the other side, show the default text.
+                }
+                if (stringId == PARTY_MSG_CHOOSE_MON)
+                    StringCopy(gStringVar2, gSpeciesNames[species]);
+            }
+            else
+            stringId = PARTY_MSG_CHOOSE_MON_2;
         }
         DrawStdFrameWithCustomTileAndPalette(*windowPtr, FALSE, 0x58, 15);
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
