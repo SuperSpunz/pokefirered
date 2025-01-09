@@ -1,3 +1,10 @@
+## Faster / Streamlined Indigo League
+
+### Description
+Makes multiple subsequent runs through the Indigo League a little bit more streamlined, mainly for anyone attempting the Braggart's 200 Hall of Fame Entries Sticker.
+* Added "Sign" triggers to the tile in front of each E4 member, so you can start the battle immediately after the cutscene walks you into their room.
+* Made the E4 member step out of the way after the battle is won. Oddly, this code already existed for Lance, but wasn't used.
+
 # Pokémon FireRed and LeafGreen
 
 This is a decompilation of English Pokémon FireRed and LeafGreen.
