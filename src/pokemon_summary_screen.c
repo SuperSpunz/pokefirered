@@ -2938,6 +2938,7 @@ static void PokeSum_DrawMoveTypeIcons(void)
     }
 
     if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
+    {
         if (sMonSummaryScreen->moveIds[4] == MOVE_HIDDEN_POWER)
         {
             u8 typeBits = ((GetMonData(mon, MON_DATA_HP_IV)    & 1) << 0)
@@ -2953,6 +2954,7 @@ static void PokeSum_DrawMoveTypeIcons(void)
             sMonSummaryScreen->moveTypes[4] = type & 0x3F;
         }
         BlitMenuInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[4] + 1, 3, GetMoveNamePrinterYpos(4));
+    }
 }
 
 static void PokeSum_PrintPageHeaderText(u8 curPageIndex)
