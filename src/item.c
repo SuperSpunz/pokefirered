@@ -14,6 +14,7 @@
 EWRAM_DATA struct BagPocket gBagPockets[NUM_BAG_POCKETS] = {};
 
 void SortAndCompactBagPocket(struct BagPocket * pocket);
+void ItemId_GetHoldEffectParam_Script();
 
 // Item descriptions and data
 #include "data/items.h"
@@ -631,6 +632,11 @@ u8 ItemId_GetHoldEffect(u16 itemId)
 u8 ItemId_GetHoldEffectParam(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].holdEffectParam;
+}
+
+void ItemId_GetHoldEffectParam_Script()
+{
+    VarSet(VAR_RESULT, ItemId_GetHoldEffectParam(VarGet(VAR_0x8004)));
 }
 
 const u8 * ItemId_GetDescription(u16 itemId)
