@@ -2874,26 +2874,46 @@ static void PokeSum_PrintExpPoints_NextLv(void)
 
 static void PokeSum_PrintSelectedMoveStats(void)
 {
+    const u8 *text;
     struct Pokemon *mon = &sMonSummaryScreen->currentMon;
+    u8 power;
     u8 buffer[50];
+    u8 monFriendship = GetMonData(mon, MON_DATA_FRIENDSHIP);
 
     if (sMoveSelectionCursorPos < 5)
     {
         if (sMonSummaryScreen->mode != PSS_MODE_SELECT_MOVE && sMoveSelectionCursorPos == 4)
             return;
 
-        if (sMonSummaryScreen->moveIds[sMoveSelectionCursorPos] == MOVE_HIDDEN_POWER)
-        {
-            u8 powerBits = ((GetMonData(mon, MON_DATA_HP_IV)    & 2) >> 1)
-                         | ((GetMonData(mon, MON_DATA_ATK_IV)   & 2) << 0)
-                         | ((GetMonData(mon, MON_DATA_DEF_IV)   & 2) << 1)
-                         | ((GetMonData(mon, MON_DATA_SPEED_IV) & 2) << 2)
-                         | ((GetMonData(mon, MON_DATA_SPATK_IV) & 2) << 3)
-                         | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 2) << 4);
-            u8 power = (40 * powerBits) / 63 + 30;
-            ConvertIntToDecimalStringN(buffer, power, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[sMoveSelectionCursorPos], buffer);
-        }
+        switch (sMonSummaryScreen->moveIds[sMoveSelectionCursorPos]) {
+            case MOVE_HIDDEN_POWER:
+                {
+                u8 powerBits = ((GetMonData(mon, MON_DATA_HP_IV)    & 2) >> 1)
+                             | ((GetMonData(mon, MON_DATA_ATK_IV)   & 2) << 0)
+                             | ((GetMonData(mon, MON_DATA_DEF_IV)   & 2) << 1)
+                             | ((GetMonData(mon, MON_DATA_SPEED_IV) & 2) << 2)
+                             | ((GetMonData(mon, MON_DATA_SPATK_IV) & 2) << 3)
+                             | ((GetMonData(mon, MON_DATA_SPDEF_IV) & 2) << 4);
+                power = (40 * powerBits) / 63 + 30;
+                ConvertIntToDecimalStringN(buffer, power, STR_CONV_MODE_RIGHT_ALIGN, 3);
+                StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[sMoveSelectionCursorPos], buffer);
+                break;
+                }
+            case MOVE_RETURN:
+                {
+                power = (10 * monFriendship / 25);
+                ConvertIntToDecimalStringN(buffer, power, STR_CONV_MODE_RIGHT_ALIGN, 3);
+                StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[sMoveSelectionCursorPos], buffer);
+                break;
+                }
+            case MOVE_FRUSTRATION:
+                {
+                power = (10 * (MAX_FRIENDSHIP - monFriendship) / 25);
+                ConvertIntToDecimalStringN(buffer, power, STR_CONV_MODE_RIGHT_ALIGN, 3);
+                StringCopy(sMonSummaryScreen->summary.movePowerStrBufs[sMoveSelectionCursorPos], buffer);
+                break;
+                }
+            }
 
         AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL,
                                      57, 1,
