@@ -951,6 +951,8 @@ extern const u8 gText_ShopBuy[];
 extern const u8 gText_ShopSell[];
 extern const u8 gText_ShopQuit[];
 extern const u8 gText_AnythingElseICanHelp[];
+extern const u8 gText_ThrowInPremierBallEN[];
+extern const u8 gText_ThrowInPremierBallsEN[];
 extern const u8 gText_QuitShopping[];
 extern const u8 gText_PokedollarVar1[];
 extern const u8 gText_YouDontHaveMoney[];

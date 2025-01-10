@@ -985,6 +985,18 @@ static void BuyMenuTryMakePurchase(u8 taskId)
         BuyMenuDisplayMessage(taskId, gText_HereYouGoThankYou, BuyMenuSubtractMoney);
         DebugFunc_PrintPurchaseDetails(taskId);
         RecordItemTransaction(tItemId, tItemCount, QL_EVENT_BOUGHT_ITEM - QL_EVENT_USED_POKEMART);
+    
+        if ((ItemId_GetPocket(tItemId) == POCKET_POKE_BALLS) && tItemCount > 9 && AddBagItem(ITEM_PREMIER_BALL, tItemCount / 10) == TRUE)
+        {
+            if (tItemCount > 19)
+            {
+                BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBallsEN, BuyMenuReturnToItemList);
+            }
+            else
+            {
+                BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBallEN, BuyMenuReturnToItemList);
+            }
+        }
     }
     else
     {
