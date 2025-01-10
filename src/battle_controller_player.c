@@ -1409,13 +1409,16 @@ static void MoveSelectionDisplayPpNumber(void)
 
 static void MoveSelectionDisplayMoveType(void)
 {
-    u8 *txtPtr;
+    u8 txtPtr;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
 /*
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *txtPtr++ = EXT_CTRL_CODE_BEGIN;
     *txtPtr++ = 6;
     *txtPtr++ = 1;
+*/
+	LoadPalette(sTypes_Pal, 0xB0, 0x20);
+    FillWindowPixelBuffer(B_WIN_MOVE_TYPE, PIXEL_FILL(15));
 
     if (moveInfo->moves[gMoveSelectionCursor[gActiveBattler]] == MOVE_HIDDEN_POWER)
     {
@@ -1429,20 +1432,20 @@ static void MoveSelectionDisplayMoveType(void)
         if (type >= TYPE_MYSTERY)
             type++;
         type |= 0xC0;
-        StringCopy(txtPtr, gTypeNames[type & 0x3F]);
+        txtPtr = type & 0x3F;
+        BlitMenuInfoIcon(B_WIN_MOVE_TYPE, txtPtr + 1, 0, 2);
     }
     else
     {
+        /*
         txtPtr = StringCopy(txtPtr, gText_MoveInterfaceDynamicColors);
         StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+        */
+        BlitMenuInfoIcon(B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type + 1, 0, 2);
     }
     
+//    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 
-    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
-*/
-	LoadPalette(sTypes_Pal, 0xB0, 0x20);
-    FillWindowPixelBuffer(B_WIN_MOVE_TYPE, PIXEL_FILL(15));
-    BlitMenuInfoIcon(B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type + 1, 0, 2);
     CopyWindowToVram(B_WIN_MOVE_TYPE, 3);
     PutWindowTilemap(B_WIN_MOVE_TYPE);
     MoveSelectionDisplaySplitIcon();
