@@ -1,4 +1,4 @@
-## Merged branch of all my other branches
+# Pokémon FireRed and LeafGreen - Vanilla Bean Edition
 
 ### Current Features
 * Physical Special Split: Just the regular Physical Special Split ported from Gen IV
