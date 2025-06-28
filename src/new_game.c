@@ -152,9 +152,6 @@ void NewGameInitData(void)
     //register L
     gSaveBlock1Ptr->registeredItemSelect = 0;
     gSaveBlock1Ptr->registeredItemL = 0;
-
-    //AutoRun
-    gSaveBlock2Ptr->autoRun = FALSE;
 }
 
 static void ResetMiniGamesResults(void)
